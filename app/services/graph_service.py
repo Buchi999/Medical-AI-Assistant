@@ -23,6 +23,21 @@ def build_graph():
             ("Pneumonia", ["high fever", "chills", "cough", "chest pain", "shortness of breath"]),
             ("Asthma Exacerbation", ["wheezing", "shortness of breath", "chest tightness", "cough"]),
             ("Common Cold", ["mild fever", "sneezing", "sore throat", "cough"]),
+            ("Migraine", ["headache", "nausea", "sensitivity to light", "sensitivity to sound"]),
+            ("Tension Headache", ["headache", "stress"]),
+            ("Gastroenteritis", ["nausea", "vomiting", "diarrhea", "abdominal cramps", "mild fever"]),
+            ("Urinary Tract Infection", ["burning urination", "frequent urination", "lower abdominal discomfort"]),
+            ("Strep Throat", ["sore throat", "fever", "swollen tonsils", "painful swallowing"]),
+            ("Sinusitis", ["facial pain", "nasal congestion", "thick nasal discharge", "reduced smell"]),
+            ("Allergic Rhinitis", ["sneezing", "itchy eyes", "runny nose", "nasal congestion"]),
+            ("GERD", ["heartburn", "chest discomfort", "regurgitation"]),
+            ("Anemia", ["fatigue", "pale skin", "shortness of breath", "dizziness"]),
+            ("Hypothyroidism", ["fatigue", "weight gain", "cold intolerance", "dry skin"]),
+            ("Type 2 Diabetes", ["excessive thirst", "frequent urination", "fatigue", "blurred vision"]),
+            ("Hypertension", ["headache", "dizziness", "nosebleeds"]),
+            ("Anxiety Disorder", ["excessive worry", "restlessness", "rapid heartbeat", "difficulty concentrating"]),
+            ("Depression", ["low mood", "fatigue", "loss of interest", "sleep disturbances"]),
+            ("Appendicitis", ["abdominal pain", "fever", "nausea"]),
         ]
 
         for disease, symptoms in data:

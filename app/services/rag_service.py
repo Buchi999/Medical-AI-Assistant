@@ -19,6 +19,21 @@ knowledge_base = [
     {"id": "3", "text": "Pneumonia causes high fever, chills, cough with phlegm, chest pain when breathing, and shortness of breath."},
     {"id": "4", "text": "Asthma exacerbation causes wheezing, shortness of breath, chest tightness, and cough, often triggered by infection or allergens."},
     {"id": "5", "text": "The common cold causes mild fever, sneezing, sore throat, and cough, with gradual onset over a few days."},
+    {"id": "6", "text": "Migraine causes throbbing headache, often one-sided, with nausea, and sensitivity to light and sound."},
+    {"id": "7", "text": "Tension headache causes a dull, constant ache on both sides of the head, often linked to stress or poor posture."},
+    {"id": "8", "text": "Gastroenteritis causes nausea, vomiting, diarrhea, abdominal cramps, and sometimes mild fever."},
+    {"id": "9", "text": "Urinary tract infection causes burning during urination, frequent urge to urinate, and lower abdominal discomfort."},
+    {"id": "10", "text": "Strep throat causes severe sore throat, fever, swollen tonsils, and painful swallowing, without cough."},
+    {"id": "11", "text": "Sinusitis causes facial pain and pressure, nasal congestion, thick nasal discharge, and reduced sense of smell."},
+    {"id": "12", "text": "Allergic rhinitis causes sneezing, itchy eyes, runny nose, and nasal congestion, often triggered by pollen or dust."},
+    {"id": "13", "text": "Gastroesophageal reflux disease (GERD) causes heartburn, chest discomfort, and regurgitation, often worse after meals."},
+    {"id": "14", "text": "Anemia causes fatigue, pale skin, shortness of breath, and dizziness, due to low red blood cell count."},
+    {"id": "15", "text": "Hypothyroidism causes fatigue, weight gain, cold intolerance, dry skin, and depression."},
+    {"id": "16", "text": "Type 2 diabetes causes excessive thirst, frequent urination, fatigue, and blurred vision."},
+    {"id": "17", "text": "Hypertension is often asymptomatic but can cause headaches, dizziness, and nosebleeds in severe cases."},
+    {"id": "18", "text": "Anxiety disorder causes excessive worry, restlessness, rapid heartbeat, and difficulty concentrating."},
+    {"id": "19", "text": "Depression causes persistent low mood, fatigue, loss of interest, and sleep disturbances."},
+    {"id": "20", "text": "Appendicitis causes sudden abdominal pain starting near the navel and moving to the lower right side, with fever and nausea."},
 ]
 
 def setup_knowledge_base():
