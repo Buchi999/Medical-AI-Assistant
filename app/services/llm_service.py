@@ -2,15 +2,25 @@ import os
 import json
 from groq import Groq
 from dotenv import load_dotenv
+from app.services.rag_service import setup_knowledge_base, retrieve_relevant_knowledge
 
 load_dotenv()
 
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-def get_diagnosis(symptoms: list[str], age: int | None, history: list[str] | None):
-    prompt = f"""You are a medical assistant AI. Based on the following patient information, 
-suggest possible conditions.
+setup_knowledge_base()
 
+def get_diagnosis(symptoms: list[str], age: int | None, history: list[str] | None):
+    relevant_facts = retrieve_relevant_knowledge(symptoms)
+    context = "\n".join(f"- {fact}" for fact in relevant_facts)
+
+    prompt = f"""You are a medical assistant AI. Use the reference medical knowledge below 
+to help inform your answer, combined with your own medical knowledge.
+
+Reference medical knowledge:
+{context}
+
+Patient information:
 Symptoms: {', '.join(symptoms)}
 Age: {age if age else 'not provided'}
 Medical history: {', '.join(history) if history else 'none provided'}
