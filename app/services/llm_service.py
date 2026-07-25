@@ -3,6 +3,7 @@ import json
 from groq import Groq
 from dotenv import load_dotenv
 from app.services.rag_service import setup_knowledge_base, retrieve_relevant_knowledge
+from app.services.graph_service import find_diseases_by_symptoms
 
 load_dotenv()
 
@@ -14,11 +15,20 @@ def get_diagnosis(symptoms: list[str], age: int | None, history: list[str] | Non
     relevant_facts = retrieve_relevant_knowledge(symptoms)
     context = "\n".join(f"- {fact}" for fact in relevant_facts)
 
-    prompt = f"""You are a medical assistant AI. Use the reference medical knowledge below 
-to help inform your answer, combined with your own medical knowledge.
+    graph_matches = find_diseases_by_symptoms(symptoms)
+    graph_context = "\n".join(
+        f"- {m['disease']}: matches {m['matches']} of the patient's symptoms"
+        for m in graph_matches
+    )
+
+    prompt = f"""You are a medical assistant AI. Use the reference medical knowledge and 
+symptom-matching data below to help inform your answer, combined with your own medical knowledge.
 
 Reference medical knowledge:
 {context}
+
+Symptom-graph matches (ranked by number of matching symptoms):
+{graph_context}
 
 Patient information:
 Symptoms: {', '.join(symptoms)}
